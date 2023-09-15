@@ -8,13 +8,14 @@ class ChronoThread(Thread):
     def __init__(self, chrono):
         super().__init__()
         self.chrono = chrono
+        self.update_gap = 0.01  # In seconds.
 
     def run(self):
         while True:
-            time.sleep(1)
+            time.sleep(self.update_gap)
             while self.chrono.state:
-                time.sleep(1)
                 self.chrono.canvas.itemconfig(
                     self.chrono.view,
                     text=self.chrono.update_chrono()
                 )
+                time.sleep(self.update_gap)

@@ -141,9 +141,8 @@ texto = header.create_text(
 )
 
 header.place(x=10, y=25)
-add_chron_button.place(x=120, y=250)
+add_chron_button.place(x=120, y=150)
 
 
 if __name__ == '__main__':
-
     root.mainloop()
