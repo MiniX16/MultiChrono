@@ -1,3 +1,4 @@
+import time
 from threading import Thread
 
 
@@ -10,7 +11,9 @@ class ChronoThread(Thread):
 
     def run(self):
         while True:
+            time.sleep(1)
             while self.chrono.state:
+                time.sleep(1)
                 self.chrono.canvas.itemconfig(
                     self.chrono.view,
                     text=self.chrono.update_chrono()
