@@ -9,6 +9,7 @@ class Chrono:
         self.origin = time.time()
         self.canvas = canvas
         self.my_time = 0
+        self.actual_time = 0
         self.view = canvas.create_text(
             coord_x,
             coord_y,
@@ -42,7 +43,8 @@ class Chrono:
 
     def update_chrono(self):
         """Get the time that has passed since the begining formated."""
-        return self.format_time(self.elapsed_time())
+        self.actual_time = self.elapsed_time()
+        return self.format_time(self.actual_time)
 
     def restart_chrono(self):
         """The timer sets to zero and starts again."""
