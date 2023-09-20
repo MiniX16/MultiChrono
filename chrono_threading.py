@@ -1,3 +1,6 @@
+"""Allow the chronometer work at the same time other chronos and the window is
+working.
+"""
 import time
 from threading import Thread
 
