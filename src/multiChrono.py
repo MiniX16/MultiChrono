@@ -55,7 +55,7 @@ class ChronoGenerator():
             border=0,
             text='❌',
             font=('Times New Roman', 11, 'bold'),
-            command=self.remove_chron,
+            command=lambda: [self.relocate_chronos(), self.remove_chron()]
         )
 
         self.chrono = Chrono(self.body, 80, 48)
@@ -118,9 +118,29 @@ class ChronoGenerator():
         self.rename_chron_button.config(text=name.get())
         window.destroy()
 
+    def relocate_chronos(self) -> None:
+        """Relocate all indicated chronometers just one site higher."""
+        behind_self = False
+
+        for chrono in generators:
+            if behind_self:
+
+                to_relocate = [
+                    chrono.body,
+                    chrono.rename_chron_button,
+                    chrono.start_chron_button,
+                    chrono.restart_chron_button,
+                    chrono.delete_chron_button,
+                ]
+                for item in to_relocate:
+                    item.place(x=item.winfo_x(), y=item.winfo_y() - GAP)
+
+            if chrono.body.winfo_y() == self.body.winfo_y():
+                behind_self = True
+
     def remove_chron(self) -> None:
         """Remove all the chronometer and chronometer's elemnts from the
-        window.
+        window and returns the list of chronometer to move.
         """
         to_destroy = [
             self.body,
