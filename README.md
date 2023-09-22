@@ -36,10 +36,13 @@ The interface is very straightforward; I believe each button clearly indicates i
 Here you have some images of how the program looks like:
 
 <p align="center">
-  <img src=https://github.com/MiniX16/MultiChrono/blob/main/assets/Empty_img.png alt="Proyect's Title">
-  <img src=https://github.com/MiniX16/MultiChrono/blob/main/assets/Chronometers_img.png alt="Proyect's Title">
+  <img src=https://github.com/MiniX16/MultiChrono/blob/main/assets/Empty_img.png alt="No chronometers">
+  <img src=https://github.com/MiniX16/MultiChrono/blob/main/assets/Chronometers_img.png alt="chronometers">
 </p>
 
 
 > [!NOTE]  
-> Keep in mind that you can modify the saved _txt file_ to load the timers you want with the values you prefer. The syntax is straightforward; on an odd-numbered line (starting with the first), you put the name, and on the next line (even-numbered), you put the desired value in seconds, ending with _'.0'_.
+> Keep in mind that you can modify the saved _txt file_ to load the timers you want with the values you prefer. The syntax is simple; on an odd-numbered line (starting with the first), you put the name, and on the next line (even-numbered), you put the desired value in seconds, ending with _'.0'_ just like in the image:
+<p align="center">
+  <img src=https://github.com/MiniX16/MultiChrono/blob/main/assets/Load_file_img.png alt="save">
+</p>
