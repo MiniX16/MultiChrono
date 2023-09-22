@@ -136,7 +136,14 @@ class ChronoGenerator():
                     item.place(x=item.winfo_x(), y=item.winfo_y() - GAP)
 
             if chrono.body.winfo_y() == self.body.winfo_y():
+                index = generators.index(chrono)
                 behind_self = True
+
+        add_chron_button.place(
+            x=add_chron_button.winfo_x(),
+            y=add_chron_button.winfo_y() - GAP,
+        )
+        del generators[index]  # Deletes himself from the generators list
 
     def remove_chron(self) -> None:
         """Remove all the chronometer and chronometer's elemnts from the
