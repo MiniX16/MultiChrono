@@ -1,3 +1,6 @@
+"""Open the window where all the program will be run. Generates all the
+chronometers and all its buttoms. Furthermore, it configures the window.
+"""
 import tkinter as tk
 from tkinter import filedialog, ttk
 
