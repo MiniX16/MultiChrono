@@ -233,57 +233,56 @@ def load_chronos() -> None:
     import_chronos(loaded_chronos)
 
 
-root.title('MultiCrono')
-root.config(bg='#331D2C')
-root.geometry('300x600')
-root.resizable(False, True)
-
-add_chron_button = tk.Button(
-    width=3,
-    height=1,
-    bg='#3F2E3E',
-    activebackground='#2D1D2D',
-    border=0,
-    text='+',
-    font=('Times New Roman', 25, 'bold'),
-    command=generate_chrono,
-)
-
-save_button = tk.Button(
-    width=3,
-    height=1,
-    bg='#3F2E3E',
-    activebackground='#2D1D2D',
-    border=0,
-    text='⬇',
-    font=('Times New Roman', 11, 'bold'),
-    command=save_chronos,
-)
-
-load_button = tk.Button(
-    width=3,
-    height=1,
-    bg='#3F2E3E',
-    activebackground='#2D1D2D',
-    border=0,
-    text='⬆',
-    font=('Times New Roman', 11, 'bold'),
-    command=load_chronos,
-)
-
-texto = header.create_text(
-    140,
-    50,
-    text='MultiChrono',
-    font=('Times New Roman', 30),
-    fill='#A78295',
-)
-
-header.place(x=10, y=35)
-add_chron_button.place(x=120, y=160)
-save_button.place(x=5, y=5)
-load_button.place(x=45, y=5)
-
-
 if __name__ == '__main__':
+    root.title('MultiCrono')
+    root.config(bg='#331D2C')
+    root.geometry('300x600')
+    root.resizable(False, True)
+
+    add_chron_button = tk.Button(
+        width=3,
+        height=1,
+        bg='#3F2E3E',
+        activebackground='#2D1D2D',
+        border=0,
+        text='+',
+        font=('Times New Roman', 25, 'bold'),
+        command=generate_chrono,
+    )
+
+    save_button = tk.Button(
+        width=3,
+        height=1,
+        bg='#3F2E3E',
+        activebackground='#2D1D2D',
+        border=0,
+        text='⬇',
+        font=('Times New Roman', 11, 'bold'),
+        command=save_chronos,
+    )
+
+    load_button = tk.Button(
+        width=3,
+        height=1,
+        bg='#3F2E3E',
+        activebackground='#2D1D2D',
+        border=0,
+        text='⬆',
+        font=('Times New Roman', 11, 'bold'),
+        command=load_chronos,
+    )
+
+    texto = header.create_text(
+        140,
+        50,
+        text='MultiChrono',
+        font=('Times New Roman', 30),
+        fill='#A78295',
+    )
+
+    header.place(x=10, y=35)
+    add_chron_button.place(x=120, y=160)
+    save_button.place(x=5, y=5)
+    load_button.place(x=45, y=5)
+
     root.mainloop()
