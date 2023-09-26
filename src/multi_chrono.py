@@ -204,7 +204,6 @@ def save_chronos() -> None:
         with open(saved_file, 'w', encoding='utf-8') as file:
             to_save = ''
             for generator in generators:
-                generator.chrono.stop_chrono()
                 to_save += (
                     generator.rename_chron_button.cget('text')
                     + '\n'
